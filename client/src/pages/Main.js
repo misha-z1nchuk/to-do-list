@@ -19,9 +19,7 @@ const Main = observer(() => {
     }, [])
 
 
-    const addTask = async (name) => {
-        await createTask(name)
-    }
+
 
     const HereDeleteTask = async (name) => {
         await deleteTask(name)

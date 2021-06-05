@@ -1,3 +1,4 @@
+
 const Task = require('../models/Task')
 
 class TaskController {
@@ -7,7 +8,8 @@ class TaskController {
             if(!name){
                 return res.status(400).json({message: "You have to name your task"})
             }
-            const existTask = await Task.findOne({name})
+            let user = req.user.id
+            const existTask = await Task.findOne({name, user: user})
             if(existTask){
                 return res. status(400).json({message: "Task is already exist"})
             }

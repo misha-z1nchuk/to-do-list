@@ -15,7 +15,7 @@ app.use('/api/tasks', taskRouter)
 
 const start = async () => {
     try{
-        await mongoose.connect("mongodb+srv://{yourdata}@cluster0.08hdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+        await mongoose.connect("mongodb+srv://zenya:zenya@cluster0.08hdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
         app.listen(PORT, ()=> {
             console.log(`Server is running on ${PORT} PORT`)

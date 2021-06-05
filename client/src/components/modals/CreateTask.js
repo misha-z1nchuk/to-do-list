@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import {Button, Form, Modal} from "react-bootstrap";
 import {createTask} from "../../http/taskApi";
 import {useHistory} from "react-router-dom";
-
 const CreateTask = ({show, onHide}) => {
     const [value, setValue] = useState("")
     const history = useHistory()
+
+
+
     const addTask = () => {
         if (value.length == 0) {
             alert("You have to name your task")
